@@ -55,35 +55,57 @@ Alternatively, the project can be opened via cloning/downloading repository:
 
 ### Tests: {#tests}
 ##### Describe: wordCounter()
-Test: "It should return 1 if a passage contains a single word."
-Code:
+**Test 1:** 
+*"It should return 1 if a passage contains a single word."*
+
+***Code:***
 ```javascript
 const text = "hello";
 wordCounter(text);
 ```
-Expected Output: 1
+***Expected Output:***
+1
 
-Test: "IT should return 2 if a passage contains two words."
-Code:
+**Test 2:** 
+*"It should return 2 if a passage contains two words."*
+
+***Code:***
 ```javascript
 const text = "hello there";
 wordCounter(text);
 ```
-Expected Output: 2
+***Expected Output:*** 
+2
 
-Test: "It should return 0 for an empty string."
-Code: 
+**Test 3:** 
+*"It should return 0 for an empty string."*
+
+***Code:*** 
 ```javascript
 wordCounter("");
 ```
-Expected Output: 0
+***Expected Output:***
+0
 
-Test: "It should return 0 for a string made solely of spaces, any number of them."
-Code:
+**Test 4:**
+*"It should return 0 for a string made solely of spaces, any number of them."*
+
+***Code:***
 ```javascript
 wordCounter("         ");
 ```
-Expected Output: 0
+***Expected Output:***
+0
+
+**Test 5:**
+*"It should not count numbers as words."*
+
+***Code:***
+```javascript
+wordCounter("hi there 77 19");
+```
+***Expected Output:***
+2
 
 ***
 
