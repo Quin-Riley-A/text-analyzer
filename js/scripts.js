@@ -13,6 +13,9 @@ function wordCounter(text){
   return wordCount;
 }
 
-function numberOfOccurrencesInText(){
+function numberOfOccurrencesInText(word, text) {
+  if (word === text) {
+    return 1;
+  }
   return 0;
 }
