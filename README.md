@@ -188,6 +188,16 @@ omitBadWords(word);
 ***Expected Output:***
 ""
 
+**Test 2**
+*"It should isolate a specified word and eliminate it."*
+```javascript
+const badLanguage = "good bad";
+omitBadWords(badLanguage);
+```
+***Expected Output:***
+"good"
+
+
 ***
 
 ### Known Bugs: {#bugs}

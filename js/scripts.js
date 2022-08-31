@@ -24,7 +24,10 @@ function numberOfOccurrencesInText(word, text) {
   return wordCount;
 }
 
-function omitBadWords(word) {
-  word = word.replaceAll(word, "");
-  return word;
+function omitBadWords(phrase) {
+  phrase = phrase.replace("bad", "beep");
+  return phrase;
 }
+
+string.replace("Hans", "beep");
+'Hi my name is beep'
