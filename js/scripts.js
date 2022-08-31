@@ -25,9 +25,12 @@ function numberOfOccurrencesInText(word, text) {
 }
 
 function omitBadWords(phrase) {
-  phrase = phrase.replace("bad", "beep");
+  const badWords = ["zoinks", "muppeteer", "biffaroni", "loopdaloop"];
+  let index = 0;
+  while (index < badWords.length) { 
+    phrase = phrase.replaceAll(badWords[index], "beep");
+    index+=1;
+  }
   return phrase;
 }
 
-string.replace("Hans", "beep");
-'Hi my name is beep'

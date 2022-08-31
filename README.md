@@ -197,6 +197,14 @@ omitBadWords(badLanguage);
 ***Expected Output:***
 "good"
 
+**Test 3**
+*"It should remove the specific set of bad words targetted."*
+```javascript
+const badLanguage = "zoinks that muppeteer ate biffaroni"
+omitBadWords(badLanguage);
+```
+***Expected Output:***
+"beep that beep ate beep"
 
 ***
 
