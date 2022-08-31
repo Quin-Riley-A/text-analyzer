@@ -1,8 +1,8 @@
-# (TITLE)
+# Text Analyzer
 
 ## Authored by: 
 Quin Asselin, 2022
-
+Hans Ellis, 2022
 ***
 
 ## Table of Contents
@@ -18,27 +18,16 @@ Quin Asselin, 2022
 *** 
 
 ### Repository Description: {#description}
-This application asks the user a series of questions to suggest potentially suitable coding languages for new developers who are looking for suggestions.
-
-This project was hand-built in tandem with a programming class taught by Epicodus. It contains use of {LANGUAGES} JavaScript, HTML, and formatting from both custom CSS and Bootstrap. 
-
+This application works to analyze text across several criteria such as word count, checking for instances of specific words and removing specific profanities. This project was made to test manual TDD.
 ***
-
-### Github Pages: {#pages}
-This project can be accessed on Github Pages via this [link](INSERT LINK HERE)
-
 
 ***
 
 ### Technologies Used: {#tech}
 - Javascript
-- HTML5
-- CSS3
 - Markdown Text
-- Bootstrap 4.6.2
 - Git
-- Github and Github Pages
-
+- Github
 ***
 
 ### Setup Instructions: {#setup}
@@ -49,8 +38,6 @@ Alternatively, the project can be opened via cloning/downloading repository:
 2. Locate the download destination folder on your local machine.
 3. Unzip the downloaded folder if necessary.
 4. Enter the decompressed folder and open "index.html" in your prefered web browser.
-
-(ADD STEPS ABOUT VERIFYING PROJECT IS SET UP CORRECTLY)
 ***
 
 ### Tests: {#tests}
@@ -206,6 +193,14 @@ omitBadWords(badLanguage);
 ***Expected Output:***
 "beep that beep ate beep"
 
+**Test 4**
+*"It should remove specific words regardless of punctuation."*
+```javascript
+const badLanguage = "zoinks! that muppeteer ate *biffaroni*"
+omitBadWords(badLanguage);
+```
+***Expected Output:***
+"beep that beep ate beep"
 ***
 
 ### Known Bugs: {#bugs}
@@ -219,17 +214,4 @@ Additionally, included image does not scale-down to fit to smaller screen sizes 
 
 ### License Information {#license}
 *Quin Asselin, 2022. Available for distribution, modification, inspection, and application under [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html)*
-
-#### Photo Licensure {#photo}
-Photo sourcing and respective licenses are as follows:
-- [The Python Logo Device](https://www.python.org/community/logos/)
-  * Used under clause of indicating suitability of Python.
-- [C++](https://isocpp.org/home/terms-of-use)
-  * Used under clause allowing for use in conjunction with educational material.
-- [Javascript](https://commons.wikimedia.org/wiki/File:JavaScript-logo.png)
-  * Used under permission granted by MIT License [here.](https://github.com/voodootikigod/logo.js/blob/master/LICENSE)
-- [Ruby](https://www.ruby-lang.org/en/about/logo/)
-  * Used under the terms of [Creative Commons Attribution-ShareAlike 2.5 License](https://creativecommons.org/licenses/by-sa/2.5/) produced by Yukihiro Matsumoto, Copyright © 2006.
-
-*All photos are used with permission from their respective owners.*
 

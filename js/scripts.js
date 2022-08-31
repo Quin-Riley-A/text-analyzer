@@ -33,4 +33,3 @@ function omitBadWords(phrase) {
   }
   return phrase;
 }
-
