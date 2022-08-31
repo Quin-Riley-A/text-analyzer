@@ -23,3 +23,8 @@ function numberOfOccurrencesInText(word, text) {
   });
   return wordCount;
 }
+
+function omitBadWords(word) {
+  word = word.replaceAll(word, "");
+  return word;
+}

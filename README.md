@@ -1,7 +1,7 @@
 # (TITLE)
 
 ## Authored by: 
-Quin Asselin, (YEAR)
+Quin Asselin, 2022
 
 ***
 
@@ -107,50 +107,86 @@ wordCounter("hi there 77 19");
 ***Expected Output:***
 2
 
-Describe: numberOfOccurrencesInText()
+##### Describe: numberOfOccurrencesInText()
 
-Test: "It should return 0 occurrences of a word for an empty string."
-Code:
+**Test 1:**
+*"It should return 0 occurrences of a word for an empty string."*
+***Code:***
+```javascript
 const text = "";
 const word = "red";
 numberOfOccurrencesInText(word, text);
-Expected Output: 0
+```
+***Expected Output:***
+0
 
-Test: "It should return 1 occurrence of a word when the word and the text are the same."
-Code:
+**Test 2:**
+*"It should return 1 occurrence of a word when the word and the text are the same."*
+***Code:***
+```javascript
 const text = "red";
 const word = "red";
 numberOfOccurrencesInText(word, text);
-Expected Output: 1
+```
+***Expected Output:***
+1
 
-Test: "It should return 0 occurrences of a word when the word and the text are different."
-Code:
+**Test 3:** 
+*"It should return 0 occurrences of a word when the word and the text are different."*
+**Code:**
+```javascript
 const text = "red";
 const word = "blue";
 numberOfOccurrencesInText(word, text);
-Expected Output: 0
+```
+***Expected Output:***
+0
 
-Test: "It should return the number of occurrences of a word."
-Code:
+**Test 4:** 
+*"It should return the number of occurrences of a word."*
+**Code:**
+```javascript
 const text = "red blue red red red green";
 const word = "red";
 numberOfOccurrencesInText(word, text);
-Expected Output: 4
+```
+***Expected Output:***
+4
 
-Test: "It should return a word match regardless of case."
-Code:
+**Test 5:** 
+*"It should return a word match regardless of case."*
+**Code:**
+```javascript
 const text = "red RED Red green Green GREEN";
 const word = "Red";
 numberOfOccurrencesInText(word, text);
-Expected Output: 3
+```
+***Expected Output:***
+3
 
-Test: "It should return a word match regardless of punctuation."
-Code:
+**Test 6:**
+*"It should return a word match regardless of punctuation."*
+**Code:**
+```javascript
 const text = "Red! Red. I like red, green, and yellow.";
 const word = "Red";
 numberOfOccurrencesInText(word, text);
-Expected Output: 3
+```
+***Expected Output:***
+3
 
+##### Describe 
+omitBadWords()
+
+**Test 1**
+*"It should remove a singleword and return an empty string"*
+**Code:**
+```javascript
+const word = "hello";
+omitBadWords(word);
+```
+***Expected Output:***
+""
 
 ***
 
