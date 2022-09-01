@@ -1,6 +1,12 @@
+// Utility Logic
+
+function isEmpty(testString) {
+  return (testString.trim().length === 0);
+}
+
 //Business Logic
 function wordCounter(text){
-  if (text.trim().length === 0) {
+  if (isEmpty(text)) {
     return 0;
   }
   let wordCount = 0;
@@ -14,7 +20,7 @@ function wordCounter(text){
 }
 
 function numberOfOccurrencesInText(word, text) {
-  if (word.trim().length === 0) {
+  if (isEmpty(word)) {
     return 0;
   }
   const textArray = text.split(" ");
@@ -48,6 +54,12 @@ function handleFormSubmission(event) {
   const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
   document.getElementById("total-count").innerText = wordCount;
   document.getElementById("selected-count").innerText = occurrencesOfWord;
+  let boldedPassage = boldPassage(word, passage);
+  if (boldedPassage) {
+    document.querySelector("div#bolded-passage").append(boldedPassage);
+  } else {
+    document.querySelector("div#bolded-passage").innerText = null;
+  }
 }
 
 window.addEventListener("load", function() {
@@ -55,7 +67,7 @@ window.addEventListener("load", function() {
 });
 
 function boldPassage(word, text) {
-  if ((text.trim().length === 0) || (word.trim().length === 0)) {
+  if ((isEmpty(word)) || (isEmpty(text))) {
     return null;
   }
   const p = document.createElement("p");
