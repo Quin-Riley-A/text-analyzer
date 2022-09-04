@@ -74,8 +74,9 @@ function boldPassage(word, text) {
       let targetIndex = element.indexOf(word);
       p.append(element.slice(0,targetIndex))
       const bold = document.createElement("strong");
-      bold.append(element.slice(targetIndex));
+      bold.append(element.slice(targetIndex, targetIndex+word.length));
       p.append(bold);
+      p.append(element.slice(targetIndex+word.length));
     } else {
       p.append(element);
     }
@@ -85,6 +86,8 @@ function boldPassage(word, text) {
   });
   return p;
 }
+
+
 
 
 window.addEventListener("load", function() {

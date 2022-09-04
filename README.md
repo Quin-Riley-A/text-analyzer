@@ -212,6 +212,13 @@ boldPassage(word);
 ```
 ***Expected Output:***
 some**thing**
+
+**Test 2**
+*It will bold only every target character in the word input*
+```javascript
+const word = "mississippi";
+boldPassage(word);
+```
 ***
 
 ### Known Bugs: {#bugs}
