@@ -162,8 +162,7 @@ numberOfOccurrencesInText(word, text);
 ***Expected Output:***
 3
 
-##### Describe 
-omitBadWords()
+##### Describe omitBadWords()
 
 **Test 1**
 *"It should remove a singleword and return an empty string"*
@@ -196,11 +195,23 @@ omitBadWords(badLanguage);
 **Test 4**
 *"It should remove specific words regardless of punctuation."*
 ```javascript
-const badLanguage = "zoinks! that muppeteer ate *biffaroni*"
+const badLanguage = "zoinks! that muppeteer ate *biffaroni*";
 omitBadWords(badLanguage);
 ```
 ***Expected Output:***
 "beep that beep ate beep"
+
+##### Describe boldPassage()
+*Functionality constructed in previous commits not included*
+
+**Test 1**
+*It will bold a specified portion of a word input*
+```javascript
+const word = "something";
+boldPassage(word);
+```
+***Expected Output:***
+some**thing**
 ***
 
 ### Known Bugs: {#bugs}
