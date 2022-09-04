@@ -62,10 +62,7 @@ function handleFormSubmission(event) {
   }
 }
 
-window.addEventListener("load", function() {
-  document.querySelector("form#word-counter").addEventListener("submit", handleFormSubmission);
-});
-
+// boldPassage("thing", "something");
 function boldPassage(word, text) {
   if ((isEmpty(word)) || (isEmpty(text))) {
     return null;
@@ -73,9 +70,11 @@ function boldPassage(word, text) {
   const p = document.createElement("p");
   let textArray = text.split(" ");
   textArray.forEach(function(element, index) {
-    if (word === element) {
+    if (element.includes(word)) {
+      let targetIndex = element.indexOf(word);
+      p.append(element.slice(0,targetIndex))
       const bold = document.createElement("strong");
-      bold.append(element);
+      bold.append(element.slice(targetIndex));
       p.append(bold);
     } else {
       p.append(element);
@@ -86,3 +85,8 @@ function boldPassage(word, text) {
   });
   return p;
 }
+
+
+window.addEventListener("load", function() {
+  document.querySelector("form#word-counter").addEventListener("submit", handleFormSubmission);
+});
